@@ -57,8 +57,7 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "angular-tutorial:build",
-            "port": 443
+            "browserTarget": "angular-tutorial:build"
           },
           "configurations": {
             "production": {
