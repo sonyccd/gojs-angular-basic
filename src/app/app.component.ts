@@ -31,7 +31,7 @@ export class AppComponent {
 
     dia.commandHandler.archetypeGroupData = { key: 'Group', isGroup: true };
 
-    const makePort = function(id: string, spot: go.Spot) {
+    const makePort = function (id: string, spot: go.Spot) {
       return $(go.Shape, 'Circle',
         {
           opacity: .5,
@@ -50,8 +50,8 @@ export class AppComponent {
             $('ContextMenu',
               $('ContextMenuButton',
                 $(go.TextBlock, 'Group'),
-                { click: function(e, obj) { e.diagram.commandHandler.groupSelection(); } },
-                new go.Binding('visible', '', function(o) {
+                { click: function (e, obj) { e.diagram.commandHandler.groupSelection(); } },
+                new go.Binding('visible', '', function (o) {
                   return o.diagram.selection.count > 1;
                 }).ofObject())
             )
@@ -84,7 +84,7 @@ export class AppComponent {
   public skipsDiagramUpdate = false;
 
   // When the diagram model changes, update app data to reflect those changes
-  public diagramModelChange = function(changes: go.IncrementalData) {
+  public diagramModelChange = function (changes: go.IncrementalData) {
     // when setting state here, be sure to set skipsDiagramUpdate: true since GoJS already has this update
     // (since this is a GoJS model changed listener event function)
     // this way, we don't log an unneeded transaction in the Diagram's undoManager history
@@ -128,29 +128,30 @@ export class AppComponent {
     { key: 'IdentityAttributeChange', text: "Identity Change", color: 'white' }
   ];
   public TriggersLinkData: Array<go.ObjectData> = [
-    {  }
+    {}
   ];
 
   public ActionsNodeData: Array<go.ObjectData> = [
-    { key: 'PaletteNode1', text: "PaletteNode1", color: 'white' },
+    { key: 'PaletteNode1', text: "Start Campaing", color: 'white' },
     { key: 'PaletteNode2', text: "PaletteNode2", color: 'white' }
   ];
   public ActionsLinkData: Array<go.ObjectData> = [
-    {  }
+    {}
   ];
 
   public ConditionalsNodeData: Array<go.ObjectData> = [
-    { key: 'PaletteNode1', text: "PaletteNode1", color: 'white' },
-    { key: 'PaletteNode2', text: "PaletteNode2", color: 'white' }
+    { key: 'PaletteNode1', text: "Logic", color: 'white' },
+    { key: 'PaletteNode2', text: "Is Manager", color: 'white' },
+    { key: 'TrueFlase', text: "True False", color: 'white' }
   ];
   public ConditionalsLinkData: Array<go.ObjectData> = [
-    {  }
+    {}
   ];
 
   public paletteModelData = { prop: 'val' };
   public paletteDivClassName = 'myPaletteDiv';
   public skipsPaletteUpdate = false;
-  public paletteModelChange = function(changes: go.IncrementalData) {
+  public paletteModelChange = function (changes: go.IncrementalData) {
     // when setting state here, be sure to set skipsPaletteUpdate: true since GoJS already has this update
     // (since this is a GoJS model changed listener event function)
     // this way, we don't log an unneeded transaction in the Palette's undoManager history
@@ -183,7 +184,7 @@ export class AppComponent {
 
     const appComp: AppComponent = this;
     // listener for inspector
-    this.myDiagramComponent.diagram.addDiagramListener('ChangedSelection', function(e) {
+    this.myDiagramComponent.diagram.addDiagramListener('ChangedSelection', function (e) {
       if (e.diagram.selection.count === 0) {
         appComp.selectedNode = null;
       }
