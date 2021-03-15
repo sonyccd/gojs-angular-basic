@@ -12,7 +12,7 @@ body {
 }
 
 .myPaletteDiv {
-  background: lightcyan;
+  background: rgb(168, 168, 168);
   border: 1px solid navy;
   width: 125px;
   height: 300px;

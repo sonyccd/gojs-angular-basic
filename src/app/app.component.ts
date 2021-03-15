@@ -74,17 +74,10 @@ export class AppComponent {
   }
 
   public diagramNodeData: Array<go.ObjectData> = [
-    { key: 'Alpha', text: "Node Alpha", color: 'lightblue' },
-    { key: 'Beta', text: "Node Beta", color: 'orange' },
-    { key: 'Gamma', text: "Node Gamma", color: 'lightgreen' },
-    { key: 'Delta', text: "Node Delta", color: 'pink' }
+
   ];
   public diagramLinkData: Array<go.ObjectData> = [
-    { key: -1, from: 'Alpha', to: 'Beta', fromPort: 'r', toPort: 'l' },
-    { key: -2, from: 'Alpha', to: 'Gamma', fromPort: 'b', toPort: 't' },
-    { key: -3, from: 'Beta', to: 'Beta' },
-    { key: -4, from: 'Gamma', to: 'Delta', fromPort: 'r', toPort: 'l' },
-    { key: -5, from: 'Delta', to: 'Alpha', fromPort: 't', toPort: 'r' }
+
   ];
   public diagramDivClassName: string = 'myDiagramDiv';
   public diagramModelData = { prop: 'value' };
@@ -128,13 +121,32 @@ export class AppComponent {
 
     return palette;
   }
-  public paletteNodeData: Array<go.ObjectData> = [
-    { key: 'PaletteNode1', text: "PaletteNode1", color: 'red' },
-    { key: 'PaletteNode2', text: "PaletteNode2", color: 'yellow' }
+
+
+  public TriggersNodeData: Array<go.ObjectData> = [
+    { key: 'NewIdentity', text: "New Identity", color: 'white' },
+    { key: 'IdentityAttributeChange', text: "Identity Change", color: 'white' }
   ];
-  public paletteLinkData: Array<go.ObjectData> = [
+  public TriggersLinkData: Array<go.ObjectData> = [
     {  }
   ];
+
+  public ActionsNodeData: Array<go.ObjectData> = [
+    { key: 'PaletteNode1', text: "PaletteNode1", color: 'white' },
+    { key: 'PaletteNode2', text: "PaletteNode2", color: 'white' }
+  ];
+  public ActionsLinkData: Array<go.ObjectData> = [
+    {  }
+  ];
+
+  public ConditionalsNodeData: Array<go.ObjectData> = [
+    { key: 'PaletteNode1', text: "PaletteNode1", color: 'white' },
+    { key: 'PaletteNode2', text: "PaletteNode2", color: 'white' }
+  ];
+  public ConditionalsLinkData: Array<go.ObjectData> = [
+    {  }
+  ];
+
   public paletteModelData = { prop: 'val' };
   public paletteDivClassName = 'myPaletteDiv';
   public skipsPaletteUpdate = false;
