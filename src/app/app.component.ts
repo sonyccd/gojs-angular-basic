@@ -124,16 +124,24 @@ export class AppComponent {
 
 
   public TriggersNodeData: Array<go.ObjectData> = [
-    { key: 'NewIdentity', text: "New Identity", color: 'white' },
-    { key: 'IdentityAttributeChange', text: "Identity Change", color: 'white' }
+    { key: 'IdentityCreated', text: "New Identity", color: 'white' },
+    { key: 'IdentityAttributeChange', text: "Identity Change", color: 'white' },
+    { key: 'IdentityDeleted', text: "Identity Deleted", color: 'white' },
+    { key: 'SavedSearchComplete', text: "Report Ran", color: 'white' },
+    { key: 'IdentityAggregationCompleted', text: "Aggregation Ran", color: 'white' },
+    { key: 'VAClusterStatusChangeEvent', text: "VA Status", color: 'white' }
   ];
   public TriggersLinkData: Array<go.ObjectData> = [
     {}
   ];
 
   public ActionsNodeData: Array<go.ObjectData> = [
-    { key: 'PaletteNode1', text: "Start Campaing", color: 'white' },
-    { key: 'PaletteNode2', text: "PaletteNode2", color: 'white' }
+    { key: 'StartCampaing', text: "Start Campaing", color: 'white' },
+    { key: 'SendEmail', text: "Send Email", color: 'white' },
+    { key: 'RevokeAccess', text: "Revoke Access", color: 'white' },
+    { key: 'DisableAccount', text: "Dissable Account", color: 'white' },
+    { key: 'EnableAccount', text: "Enable Account", color: 'white' },
+    { key: 'LockAccount', text: "Lock Account", color: 'white' }
   ];
   public ActionsLinkData: Array<go.ObjectData> = [
     {}
@@ -142,7 +150,6 @@ export class AppComponent {
   public ConditionalsNodeData: Array<go.ObjectData> = [
     { key: 'PaletteNode1', text: "Logic", color: 'white' },
     { key: 'PaletteNode2', text: "Is Manager", color: 'white' },
-    { key: 'TrueFlase', text: "True False", color: 'white' }
   ];
   public ConditionalsLinkData: Array<go.ObjectData> = [
     {}
