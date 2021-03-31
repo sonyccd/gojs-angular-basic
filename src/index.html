@@ -9,10 +9,36 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 
+  <script>
+    (function (w, d, s, o, f, js, fjs) {
+      w['aha-widget'] = o; w[o] = w[o] || function () { (w[o].q = w[o].q || []).push(arguments); };
+      js = d.createElement(s); fjs = d.getElementsByTagName(s)[0]; js.id = o; js.src = f; js.async = 1; fjs.parentNode.insertBefore(js, fjs);
+    })(window, document, 'script', 'aha', 'https://cdn.aha.io:443/assets/feedback/feedback.js');
+
+    aha('initialize', {
+      account: 'brad-bazemore',
+      applicationId: '6945897496923884619',
+      user: {
+        id: 'UNIQUE_USER_IDENTIFICATION',
+        name: 'USER_NAME',
+        email: 'USER_EMAIL_ADDRESS',
+      },
+    });
+  </script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var button = document.getElementById('aha-widget-button');
+      button.addEventListener('click', function () {
+        aha('open', '6945897520186347401');
+      });
+    });
+  </script>
 </head>
 
 <body>
   <app-root></app-root>
+  <button id='aha-widget-button'>Don't see what you'er looking for?</button>
 </body>
 
 </html>
