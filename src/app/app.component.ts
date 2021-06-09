@@ -65,8 +65,6 @@ export class AppComponent {
         ),
         // Ports
         makePort('t', go.Spot.TopCenter),
-        makePort('l', go.Spot.Left),
-        makePort('r', go.Spot.Right),
         makePort('b', go.Spot.BottomCenter)
       );
 
